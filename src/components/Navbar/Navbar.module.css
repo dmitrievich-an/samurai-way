@@ -1,0 +1,29 @@
+.nav {
+  grid-column: 1 / 2;
+  background-color: var(--basic-blue);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  list-style: none;
+  margin: 10px;
+}
+
+.nav__item:nth-last-child(2) {
+  margin-bottom: 30px;
+}
+
+.link {
+  color: var(--basic-white);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.active .link {
+  color: #4787ff;
+}
