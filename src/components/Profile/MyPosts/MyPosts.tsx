@@ -5,8 +5,8 @@ import {Post} from "./Post/Post";
 
 export function MyPosts() {
   return (
-    <div>
-      My posts
+    <div className={s.content}>
+      <h3>My posts</h3>
       <NewPost/>
       <ul className={s.posts_list}>
         <Post message="Hi! How are you?"/>

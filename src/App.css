@@ -14,3 +14,9 @@
   grid-gap: 10px;
 }
 
+.app-wrapper__content {
+  /*outline: 3px solid rgba(0, 255, 0, 0.7);*/
+  /*outline-offset: -3px;*/
+  grid-column: 2 / 3;
+  background-color: var(--basic-blue);
+}
