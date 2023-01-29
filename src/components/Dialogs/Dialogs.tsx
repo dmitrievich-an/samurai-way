@@ -19,9 +19,11 @@ export function Dialogs(props: DialogsPropsType) {
       <ul className={s.dialogs__list}>
         {dialogsElements}
       </ul>
-      <ul className={s.messages__list}>
-        {messageElements}
-      </ul>
+      <div className={s.right_column}>
+        <ul className={s.messages__list}>
+          {messageElements}
+        </ul>
+      </div>
     </div>
   );
 }

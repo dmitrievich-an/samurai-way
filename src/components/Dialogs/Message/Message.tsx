@@ -7,6 +7,8 @@ type MessageType = {
 
 export function Message(props: MessageType) {
   return (
-    <li className={s.messages__item}>{props.message}</li>
+    <div>
+      <li className={s.messages__item}>{props.message}</li>
+    </div>
   );
 }

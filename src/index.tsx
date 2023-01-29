@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {rerenderEntireTree} from "./render";
 import {state} from "./redux/state";
-import {BrowserRouter} from "react-router-dom";
 
 export type PostPropsType = {
   id: number
@@ -20,9 +17,5 @@ export type MessagePropsType = {
 }
 
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App state={state}/>
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+
+rerenderEntireTree(state);

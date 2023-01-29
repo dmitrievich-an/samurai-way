@@ -5,7 +5,8 @@ import {Post} from "./Post/Post";
 import {PostPropsType} from "../../../index";
 
 type MyPostsPropsType = {
-    posts: PostPropsType[]
+  posts: PostPropsType[]
+  addPost: (message: string) => void
 }
 
 export function MyPosts(props: MyPostsPropsType) {
@@ -15,7 +16,7 @@ export function MyPosts(props: MyPostsPropsType) {
   return (
     <div className={s.content}>
       <h3>My posts</h3>
-      <NewPost/>
+      <NewPost name={"Add post"} addPost={props.addPost}/>
       <ul className={s.posts_list}>
         {postsElements}
       </ul>
