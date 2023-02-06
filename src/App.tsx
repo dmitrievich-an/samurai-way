@@ -6,11 +6,12 @@ import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {Footer} from "./components/Footer/Footer";
 import {Route} from "react-router-dom";
-import {StateType} from "./redux/state";
+import {StateType, updateNewPostText} from "./redux/state";
 
 type AppPropsType = {
   state: StateType
-  addPost: (message: string) => void
+  addPost: () => void
+  updateNewPostText: (newText: string) => void
 }
 
 function App(props: AppPropsType) {
@@ -21,7 +22,11 @@ function App(props: AppPropsType) {
         <div className="app-wrapper__content">
           <Route
             path="/profile"
-            render={() => <Profile state={props.state.profilePage} addPost={props.addPost}/>}
+            render={() => <Profile
+              profilePage={props.state.profilePage}
+              addPost={props.addPost}
+              updateNewPostText={props.updateNewPostText}
+            />}
           />
           <Route
             path="/dialogs"

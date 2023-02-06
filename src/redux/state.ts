@@ -1,5 +1,8 @@
 import {DialogPropsType, MessagePropsType, PostPropsType} from "../index";
-import {rerenderEntireTree} from "../render";
+
+let rerenderEntireTree = (state: StateType) => {
+  console.log("State changed")
+}
 
 export type MessagesPageType = {
   messages: MessagePropsType[]
@@ -7,6 +10,7 @@ export type MessagesPageType = {
 }
 export type ProfilePageType = {
   posts: PostPropsType[]
+  newPostsText: string
 
 }
 export type StateType = {
@@ -20,6 +24,7 @@ export const state: StateType = {
       {id: 1, message: "Hi! How are you?", likesCount: 13},
       {id: 2, message: "It's my first post", likesCount: 11},
     ],
+    newPostsText: ""
   },
   dialogsPage: {
     dialogs: [
@@ -39,9 +44,18 @@ export const state: StateType = {
   }
 }
 
-export const addPost = (postMessage: string) => {
-  const newPost: PostPropsType = {id: new Date().getTime(), message: postMessage, likesCount: 0};
+export const addPost = () => {
+  const newPost: PostPropsType = {id: new Date().getTime(), message: state.profilePage.newPostsText, likesCount: 0};
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostsText = "";
   rerenderEntireTree(state);
+}
 
+export const updateNewPostText = (newText: string) => {
+  state.profilePage.newPostsText = newText;
+  rerenderEntireTree(state);
+}
+
+export const subscribe = (observer: (state: StateType) => void) => {
+  rerenderEntireTree = observer
 }
