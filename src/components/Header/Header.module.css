@@ -1,9 +1,0 @@
-.header {
-  padding: 10px;
-  grid-column: 1 / 3;
-  background-color: var(--basic-blue);
-}
-
-.header img {
-  width: 40px;
-}
