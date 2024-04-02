@@ -1,0 +1,27 @@
+.navigation {
+  grid-area: navigation;
+  padding: 10px;
+  background-color: rgba(11, 179, 239, 0.51);
+  list-style: none;
+}
+
+.navigation__item {
+  color: #fff;
+  font-size: 20px;
+  margin: 2px 0;
+}
+
+.navigation__item a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+.navigation__item a:hover {
+  background-color: rgba(11, 179, 239, 0.5);
+}
+
+.navigation__item:nth-last-child(2) {
+  margin-bottom: 100px;
+}
