@@ -8,7 +8,7 @@
   outline-offset: -3px;
 }
 
-.content__image-wrapper {
+.content__imageWrapper {
   width: 100%;
   height: 200px;
   overflow: hidden;
@@ -25,14 +25,14 @@
   grid-template-columns: auto 1fr;
 }
 
-.content__profile-photo,
-.content__profile-info {
+.content__profilePhoto,
+.content__profileInfo {
   padding: 10px;
 }
 
-.content__profile-photo img {
-  width: 100px;
-  height: 100px;
+.content__profilePhoto img {
+  width: 130px;
+  height: 130px;
   margin: 0 50px;
 }
 

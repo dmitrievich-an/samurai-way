@@ -1,0 +1,18 @@
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(11, 179, 239, 0.51);
+}
+
+.header__logo {
+  width: 50px;
+}
+
+.header__name {
+  margin-left: 20px;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 900;
+}
